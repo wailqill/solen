@@ -1,0 +1,12 @@
+*~
+.DS_Store
+.bundle
+capybara-*.html
+config/database.yml
+db/*.db
+db/*.sqlite3
+log/*.log
+rerun.txt
+tmp/*
+tmp/**/*
+webrat.log
