@@ -10,3 +10,7 @@ Then /^I should see the current date$/ do
     assert page.has_xpath?('//*', :text => date)
   end
 end
+
+Given /^there is no entries$/ do
+  Status.delete_all
+end

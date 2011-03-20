@@ -6,4 +6,6 @@
     = javascript_include_tag :defaults
     = csrf_meta_tag
   %body
+    - if flash[:notice]
+      #flash.notice= flash[:notice]
     = yield
