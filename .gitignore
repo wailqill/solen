@@ -10,3 +10,5 @@ rerun.txt
 tmp/*
 tmp/**/*
 webrat.log
+
+/public/stylesheets/application.css
