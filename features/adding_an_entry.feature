@@ -11,11 +11,14 @@ Feature: Adding an entry
     When I press "Solen borta"  
     Then I should be on the front page
   
-  Scenario: Simple addtion should show flash notice
+  Scenario: Simple addition should show flash notice
     When I press "Solen borta"  
     Then I should see "Solens bortkomst noterad" within "#flash"
 
-  Scenario: Simple addtion should show disappearing time
+  Scenario: Simple addition should show disappearing time
     Given the time is "11:05"
     When I press "Solen borta"
     Then I should see "Solen försvann 11:05."
+  
+  
+  

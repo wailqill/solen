@@ -21,3 +21,8 @@ Given /^the time is "([^"]*)"$/ do |time|
   @date_now = @time_now.to_date
   Timecop.travel @time_now
 end
+
+Given /^there is an entry for today$/ do
+  Status.delete_all
+  Factory(:status_today)
+end

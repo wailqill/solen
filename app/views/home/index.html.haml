@@ -1,7 +1,9 @@
 %time{:timestamp => @status.date}= l(@status.date, :format => :long)
 
-#disappeared
+#disappearance
   - if @status.disappeared_at.nil?
     = button_to "Solen borta", status_disappear_path
   - else
     = "Solen försvann #{l(@status.disappeared_at, :format => :short_time)}."
+    = button_to "Uppdatera", status_disappear_path
+    
