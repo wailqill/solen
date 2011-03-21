@@ -2,7 +2,7 @@ class CreateStatuses < ActiveRecord::Migration
   def self.up
     create_table :statuses do |t|
       t.date :date
-      t.time :disappeared_at
+      t.datetime :disappeared_at
 
       t.timestamps
     end

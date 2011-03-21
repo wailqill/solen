@@ -44,6 +44,11 @@ group :test, :cucumber do
   gem 'spork', '0.8.4'
   gem 'capybara', '0.4.1.2'
   gem 'launchy', '0.4.0'
+  gem 'timecop'
+  
+  # Use this version of chronic since it has support for ruby 1.9.2.
+  # Chronic v0.3.0 doesn't.
+  gem 'aaronh-chronic', '0.3.9', :require => 'chronic'
 end
 
 group :test, :cucumber, :development do

@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(:version => 20110320184843) do
 
   create_table "statuses", :force => true do |t|
     t.date     "date"
-    t.time     "disappeared_at"
+    t.datetime "disappeared_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

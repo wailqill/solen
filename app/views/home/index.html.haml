@@ -1,4 +1,7 @@
-%time= l(Date.today, :format => :long)
+%time{:timestamp => @status.date}= l(@status.date, :format => :long)
 
-= form_tag status_disappear_path do
-  %button{type: :submit} Solen borta
+#disappeared
+  - if @status.disappeared_at.nil?
+    = button_to "Solen borta", status_disappear_path
+  - else
+    = "Solen försvann #{l(@status.disappeared_at, :format => :short_time)}."

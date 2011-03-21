@@ -14,3 +14,10 @@ end
 Given /^there is no entries$/ do
   Status.delete_all
 end
+
+Given /^the time is "([^"]*)"$/ do |time|
+  Chronic.time_class = Time.zone
+  @time_now = Chronic.parse(time)
+  @date_now = @time_now.to_date
+  Timecop.travel @time_now
+end
