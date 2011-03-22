@@ -1,5 +1,5 @@
-Feature: Updating an entry
-  In order to change an status entry
+Feature: Updating a disappearance
+  In order to change an status entry for disappearance
   As a user
   I want to update erroneous data
 

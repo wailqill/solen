@@ -1,4 +1,4 @@
-Feature: Adding an entry
+Feature: Adding a disappearance
   In order to track the suns movement
   As a user
   I want to be able to add entries for when the sun is blocked
