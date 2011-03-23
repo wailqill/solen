@@ -10,13 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110320184843) do
+ActiveRecord::Schema.define(:version => 20110322162852) do
 
   create_table "statuses", :force => true do |t|
     t.date     "date"
     t.datetime "disappeared_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "position1"
+    t.datetime "position2"
+    t.datetime "position3"
   end
 
 end

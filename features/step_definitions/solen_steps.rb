@@ -26,3 +26,9 @@ Given /^there is an entry for today$/ do
   Status.delete_all
   Factory(:status_today)
 end
+
+Then /^I should see "([^"]*)" in the button within "([^"]*)"$/ do |text, selector|
+  with_scope(selector) do
+    page.should have_xpath("//input[@value='#{text}']")
+  end
+end
