@@ -14,7 +14,6 @@ Feature: Entering a sun survival
     Given there is no entries
     And the time is "13:29"
     And I am on the front page
-    And show me the page
     When I press "Nu" within "#position1_container"
     Then I should be on the front page
     And I should see "13:29" in the button within "#position1_container"
