@@ -27,8 +27,6 @@ Given /^there is an entry for today$/ do
   Factory(:status_today)
 end
 
-Then /^I should see "([^"]*)" in the button within "([^"]*)"$/ do |text, selector|
-  with_scope(selector) do
-    page.should have_xpath("//input[@value='#{text}']")
-  end
+Then /^I should see "([^"]*)" in a button$/ do |text|
+  page.should have_xpath("//input[@value='#{text}']")
 end
