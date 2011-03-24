@@ -2,6 +2,8 @@ Solen::Application.routes.draw do
   post "disappear" => "status#disappear", :as => "status_disappear"
   post "survived/:id" => "status#survived", :as => "status_survived"
   
+  match "statuses" => "status#index", :as => "statuses"
+  
   root :to => "home#index"
 
   # The priority is based upon order of creation:

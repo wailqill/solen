@@ -1,6 +1,7 @@
 %header
   %h1
     %time{:timestamp => @status.date}= l(@status.date, :format => :long)
+  = link_to 'Alla', statuses_path
 
 %section#content
   #house
