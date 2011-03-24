@@ -10,6 +10,9 @@ module NavigationHelpers
 
     when /the (home|front)\s?page/
       '/'
+    when /the statuses page/
+      statuses_path
+
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
