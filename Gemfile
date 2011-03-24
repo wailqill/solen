@@ -38,7 +38,7 @@ gem 'looksee'
 gem 'wirble'
 
 group :test, :cucumber do
-  gem 'cucumber-rails', '0.3.2'
+  gem 'cucumber-rails', '~> 0.4.0'
   gem 'database_cleaner', '0.6.6'
   gem 'factory_girl_rails', '1.0.1'
   gem 'spork', '0.8.4'
