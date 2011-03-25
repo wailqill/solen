@@ -212,6 +212,7 @@
       default: "%Y-%m-%d"
       short: "%e %b"
       long: "%e %B %Y"
+      short_time: "%H:%M"
 
     day_names: [söndag, måndag, tisdag, onsdag, torsdag, fredag, lördag]
     abbr_day_names: [sön, mån, tis, ons, tor, fre, lör]

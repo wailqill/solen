@@ -1,6 +1,10 @@
 # encoding: utf-8
 class StatusController < ApplicationController
-  before_filter :set_current_status
+  before_filter :set_current_status, :except => :index
+  
+  def index
+    @statuses = Status.order("date DESC")
+  end
   
   def disappear
     @status.disappeared_at = Time.now

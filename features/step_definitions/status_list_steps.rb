@@ -9,6 +9,6 @@ When /^I delete the (\d+)(?:st|nd|rd|th) status$/ do |pos|
   end
 end
 
-Then /^I should see the following status_lists:$/ do |expected_statuses_table|
+Then /^I should see the following statuses:$/ do |expected_statuses_table|
   expected_statuses_table.diff!(tableish('table tr', 'td,th'))
 end

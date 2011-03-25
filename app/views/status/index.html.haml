@@ -1,0 +1,15 @@
+%table
+  %thead
+    %tr
+      %th Datum
+      %th Död
+      %th Tak 1
+      %th Tak 2
+      %th Tak 3
+  %tbody
+    - @statuses.each do |status|
+      %tr
+        %td= status.date.blank? ? "<tomt>" : l(status.date, :format => :long)
+        %td= l(status.disappeared_at, :format => :short_time)
+        - (1..3).each do |i|
+          %td= status.position_string(i, '-')
