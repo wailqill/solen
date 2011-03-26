@@ -17,7 +17,7 @@ end
 
 Given /^the time is "([^"]*)"$/ do |time|
   # fix chronic parsing of time.
-  time = "today at #{time}" if time =~ /\d\d:\d\d/
+  time = "today at #{time}" if time =~ /^\d\d:\d\d$/
   
   Chronic.time_class = Time.zone
   @time_now = Chronic.parse(time)
