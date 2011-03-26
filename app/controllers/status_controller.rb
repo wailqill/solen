@@ -13,6 +13,7 @@ class StatusController < ApplicationController
   end
   
   def survived
+    @status.date ||= Date.today
     @status.send "position#{params[:id]}=", Time.now
     @status.save!
     redirect_to root_path, :notice => "Solens överlevnad noterad"

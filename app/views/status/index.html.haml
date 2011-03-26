@@ -9,7 +9,7 @@
   %tbody
     - @statuses.each do |status|
       %tr
-        %td= status.date.blank? ? "<tomt>" : l(status.date, :format => :long)
-        %td= l(status.disappeared_at, :format => :short_time)
+        %td= l(status.date, :format => :long)
+        %td= status.disappeared_at.blank? ? '-' : l(status.disappeared_at, :format => :short_time)
         - (1..3).each do |i|
           %td= status.position_string(i, '-')

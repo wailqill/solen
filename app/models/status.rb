@@ -1,4 +1,7 @@
 class Status < ActiveRecord::Base
+  
+  validates :date, :presence => true
+  
   def position_string n, default = "Nu"
     time = self.send("position#{n}")
     unless time.blank?

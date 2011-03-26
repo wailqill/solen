@@ -6,12 +6,14 @@ describe StatusController do
     @date_now = @time_now.to_date
     Time.stub!(:now).and_return(@time_now)
   end
+  
   describe "POST 'disappear'" do
     it "should redirect" do
       post :disappear
       response.should redirect_to(root_path)
     end
-    describe "when no status for today exists" do
+    
+    context "when no status for today exists" do
       it "creates a new status" do
         post :disappear
         assigns[:status].should_not be_nil
@@ -21,7 +23,8 @@ describe StatusController do
         assigns[:status].date.should == @time_now.to_date
       end
     end
-    describe "when a status for today exists" do
+    
+    context "when a status for today exists" do
       before do
         @status = Factory(:status, :date => @date_now, :disappeared_at => @time_now)
       end
@@ -35,4 +38,12 @@ describe StatusController do
       end
     end
   end
+  
+  describe "POST 'survived'" do
+    it "should set the date" do
+      post :survived, :id => 1
+      assigns[:status].date.should == @date_now
+    end
+  end
+  
 end
