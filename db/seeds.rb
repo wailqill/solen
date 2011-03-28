@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+
+# Known dates and times are added here until the app is deployed.
+Status.create :date => '2011-03-26',
+              :disappeared_at => '2011-03-26 16:15 CET'
