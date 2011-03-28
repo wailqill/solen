@@ -31,6 +31,7 @@ gem 'sqlite3'
 # end
 
 gem 'haml-rails', "0.3.4"
+gem 'hassle3'
 
 # Console display helpers
 gem 'awesome_print'
