@@ -72,7 +72,7 @@ Here's how to integrate it with your favorite web framework:
 
 h3. Rails
 
-For Rails: @script/plugin install git://github.com/Papipo/hassle@. Done. Once you're in production mode, Hassle will kick in and prepare your SASS for all to enjoy.
+For Rails: @script/plugin install git://github.com/pedro/hassle@. Done. Once you're in production mode, Hassle will kick in and prepare your SASS for all to enjoy.
 
 h3. Sinatra
 

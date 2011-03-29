@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/koppen/hassle.git
+  revision: bb49cd8b37f5369d08398897caf1b687eaa80458
+  specs:
+    hassle (0.0.1)
+      haml
+      rack
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -78,9 +86,6 @@ GEM
       activesupport (~> 3.0)
       haml (~> 3.0)
       railties (~> 3.0)
-    hassle3 (0.0.2)
-      haml
-      rack
     heroku (1.6.3)
       json (>= 1.1.0)
       launchy (>= 0.3.2)
@@ -165,7 +170,7 @@ DEPENDENCIES
   factory_girl_generator (>= 0.0.1)
   factory_girl_rails (= 1.0.1)
   haml-rails (= 0.3.4)
-  hassle3
+  hassle!
   heroku
   launchy (= 0.4.0)
   looksee

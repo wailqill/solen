@@ -75,6 +75,8 @@ describe Hassle::Compiler do
       css_location = @hassle.css_location(template_directory)
       css_file = @hassle.css_location(File.join(output_directory, File.basename(sass_template)))
       css_file.should be_compiled
+
+      @hassle.stylesheets.should == ['/css/screen.css']
     end
 
     it "should compile sass if template location is a hash with multiple locations" do

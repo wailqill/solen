@@ -31,7 +31,7 @@ gem 'sqlite3'
 # end
 
 gem 'haml-rails', "0.3.4"
-gem 'hassle3'
+gem 'hassle', :git => 'https://github.com/koppen/hassle.git'
 
 # Console display helpers
 gem 'awesome_print'
