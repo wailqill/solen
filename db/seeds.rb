@@ -8,4 +8,4 @@
 
 # Known dates and times are added here until the app is deployed.
 Status.create :date => '2011-03-26',
-              :disappeared_at => '2011-03-26 16:15 CET'
+              :disappeared_at => '2011-03-26 16:15+0100'
