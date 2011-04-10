@@ -1,6 +1,7 @@
 Solen::Application.routes.draw do
   post "disappear" => "status#disappear", :as => "status_disappear"
   post "survived/:id" => "status#survived", :as => "status_survived"
+  post "birth" => "status#birth", :as => "status_birth"
   
   match "statuses" => "status#index", :as => "statuses"
   

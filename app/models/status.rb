@@ -10,4 +10,12 @@ class Status < ActiveRecord::Base
       default
     end
   end
+  
+  def birth_string
+    unless birth.blank?
+      I18n.l(birth, :format => :short_time)
+    else
+      "Upp"
+    end
+  end
 end

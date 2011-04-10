@@ -18,4 +18,11 @@ class StatusController < ApplicationController
     @status.save!
     redirect_to root_path, :notice => "Solens överlevnad noterad"
   end
+  
+  def birth
+    @status.date ||= Date.today
+    @status.birth = Time.now
+    @status.save!
+    redirect_to root_path, :notice => "Solens födelse noterad"
+  end
 end

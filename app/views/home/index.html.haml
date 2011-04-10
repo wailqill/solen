@@ -5,6 +5,10 @@
 
 %section#content
   #house
+  
+  #birth_container
+    = button_to @status.birth_string, status_birth_path
+    
   #disappearance
     - if @status.disappeared_at.nil?
       = button_to "Solen borta", status_disappear_path
@@ -12,7 +16,7 @@
       = "Solen försvann #{l(@status.disappeared_at, :format => :short_time)}."
       = button_to "Uppdatera", status_disappear_path
 
-  = image_tag 'house.png', :alt => 'Huset som är i vägen'
+  = image_tag 'house.png', :alt => 'Husen som är i vägen'
   - (1..3).each do |i|
     %div{:id => "position#{i}_container"}
       = button_to @status.position_string(i), status_survived_path(i), :id => "position#{i}"
